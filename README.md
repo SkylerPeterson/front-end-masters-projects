@@ -12,7 +12,8 @@ Home
 |- Topic
 ||
 ||- Class Name
-|||- README.md
+|||- Project
+||||- README.md
 ```
 
 ### Example
@@ -22,27 +23,36 @@ Home
 |
 |- CSS
 ||
-||- Advanced-CSS-v2
-|||- README.md
-|||- index.html
-|||- styles.css
-||
 ||- Flex-And-Grids
-|||- README.md
-|||- index.html
-|||- styles.css
+|||- Fun-With-FlexBox
+||||- README.md
+||||- index.html
+||||- styles.css
+|||
+|||- Fun-With-Grids
+||||- README.md
+||||- index.html
+||||- styles.css
+||
+||- Advanced-CSS-v2
+|||- Animations-and-Transitions
+||||- README.md
+||||- index.html
+||||- styles.css
 |
 |- JS
 ||
 ||- Beginers-Javascript-v3
-|||- README.md
-|||- index.html
-|||- styles.css
-|||- script.js
+|||- Simple-Coding
+||||- README.md
+||||- index.html
+||||- styles.css
+||||- script.js
 ||
 ||- Async-Javascript-v2
-|||- README.md
-|||- index.html
-|||- styles.css
-|||- script.js
+|||- Parallel-API-Fetching
+||||- README.md
+||||- index.html
+||||- styles.css
+||||- script.js
 ```
