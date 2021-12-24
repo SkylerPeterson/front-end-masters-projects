@@ -1,0 +1,78 @@
+:root {
+    --primary-text: #FFFFFF;
+    --secondary-text: #EDEFEA;
+    --primary-background: #112A40;
+    --secondary-background: #A1B1B0;
+    --tertiary-background: #F28B0C;
+    --link: #e310cb;
+    --active-link: #ff17e4;
+    --font-size: 1.3rem;
+    --main-font: 'Open Sans', sans-serif;
+    --accent-font: 'Vollkorn', serif;
+}
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: var(--main-font);
+    background-color: var(--primary-background);
+    color: var(--primary-text);
+    font-size: var(--font-size);
+}
+
+h1, h2, h3 {
+    margin: 0;
+}
+
+a {
+    color: var(--link);
+}
+
+a:hover {
+    color: var(--active-link);
+    text-decoration: none;
+}
+
+#intro {
+    padding-bottom: 10rem;
+}
+
+#intro p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#intro .name {
+    font-family: var(--accent-font);
+}
+
+#intro .name span {
+    font-family: var(--main-font);
+    font-size: 4rem;
+    color: var(--secondary-text);
+    display: block;
+}
+
+#intro h2 {
+    font-size: 4rem;
+    font-weight: normal;
+}
+
+#contact {
+    text-align: center;
+    padding: 4rem 0;
+    width: 400px;
+    margin: 0 auto;
+}
+
+#contact p:last-child {
+    margin-top: 4rem;
+}
