@@ -1,6 +1,6 @@
 :root {
     --primary-text: #FFFFFF;
-    --secondary-text: #EDEFEA;
+    --secondary-text: #86fbfb;
     --primary-background: #112A40;
     --secondary-background: #A1B1B0;
     --tertiary-background: #F28B0C;
@@ -41,8 +41,33 @@ a:hover {
     text-decoration: none;
 }
 
+.button {
+    background-color: var(--link);
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-family: var(--accent-font);
+    color: var(--primary-text);
+    text-decoration: none;
+}
+
+.button:hover {
+    color: var(--primary-text);
+    background-color: var(--active-link);
+}
+
+.gradient {
+    background: linear-gradient(90deg, rgba(255,23,228,1) 0%, rgba(134,251,251,1) 100%);
+    height: 2px;
+}
+
+/*
+ * Intro Stuff
+ */
+
 #intro {
-    padding-bottom: 10rem;
+    padding: 4rem 1rem 10rem 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 #intro p {
@@ -66,6 +91,14 @@ a:hover {
     font-weight: normal;
 }
 
+/*
+ * Contact Stuff
+ */
+
+.contact-div {
+    background-color: var(--tertiary-background);
+}
+
 #contact {
     text-align: center;
     padding: 4rem 0;
@@ -76,6 +109,11 @@ a:hover {
 #contact p:last-child {
     margin-top: 4rem;
 }
+
+
+/*
+ * Navbar Stuff
+ */
 
 nav {
     font-family: var(--accent-font);
@@ -114,12 +152,52 @@ nav a {
     display: block;
 }
 
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
 nav a:hover,
 nav [class*="fa-"]:hover {
     color: var(--active-link);
 }
 
-nav li:first-child {
-    flex-basis: 100%;
+/*
+ * Footer Stuff
+ */
+
+footer {
     text-align: center;
+    padding: 4rem 0;
+    width: 400px;
+    margin: 0 auto;
+}
+
+footer h2 {
+    margin: 0;
+}
+
+footer ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    list-style-type: none;
+    font-size: 3rem;
+    padding: 0;
+    margin: 2rem 0;
+}
+
+@media(min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
 }
