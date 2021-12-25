@@ -41,6 +41,10 @@ a:hover {
     text-decoration: none;
 }
 
+img {
+    width: 100%;
+}
+
 .button {
     background-color: var(--link);
     padding: 0.5rem;
@@ -89,6 +93,96 @@ a:hover {
 #intro h2 {
     font-size: 4rem;
     font-weight: normal;
+}
+
+/*
+ * Project Stuff
+ */
+
+.project-div {
+    background-color: var(--secondary-background);
+}
+
+#projects {
+  padding: 4rem 1rem;
+}
+
+#projects h2 {
+  font-size: 2.5rem;
+  margin-bottom: calc(2.5rem * 1.5);
+}
+
+#projects h3 {
+  color: var(--secondary-text);
+}
+
+#projects h4 {
+  font-size: 1rem;
+  font-family: var(--accent-font);
+  margin: 0;
+}
+
+.primary-box {
+    background-color: var(--primary-background);
+    padding: 1rem;
+    border-radius: 10px;
+    color: var(--primary-text);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+#projects ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    gap: 1rem;
+    font-size: 1rem;
+}
+
+#projects img {
+    padding: 1rem;
+    margin: 2rem 0 4rem 0;
+    border-left: 1px solid var(--secondary-text);
+    border-top: 1px solid var(--secondary-text);
+    border-radius: 25px;
+}
+
+@media (min-width: 550px) {
+    #projects {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    article {
+        display: grid;
+        grid-template-columns: repeat(10, 1fr);
+        gap: 1rem;
+    }
+    #projects img {
+        grid-column: 1/6;
+        grid-row: 1/2;
+    }
+    #projects .reverse img {
+        grid-column: 6/11;
+    }
+    #projects .article-text {
+        order: 2;
+        text-align: right;
+        grid-column: 5/11;
+        grid-row: 1/2;
+    }
+    #projects .reverse .article-text {
+        grid-column: 1/7;
+        text-align: left;
+    }
+    #projects ul {
+        justify-content: flex-end;
+    }
+    #projects .reverse ul {
+        justify-content: flex-start;
+    }
 }
 
 /*
@@ -162,6 +256,19 @@ nav [class*="fa-"]:hover {
     color: var(--active-link);
 }
 
+@media(min-width: 850px) {
+    nav {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        text-align: left;
+        margin-right: auto;
+    }
+}
+
 /*
  * Footer Stuff
  */
@@ -187,17 +294,4 @@ footer ul {
     font-size: 3rem;
     padding: 0;
     margin: 2rem 0;
-}
-
-@media(min-width: 850px) {
-    nav {
-        max-width: 1200px;
-        margin: 0 auto;
-    }
-
-    nav li:first-child {
-        flex-basis: auto;
-        text-align: left;
-        margin-right: auto;
-    }
 }
