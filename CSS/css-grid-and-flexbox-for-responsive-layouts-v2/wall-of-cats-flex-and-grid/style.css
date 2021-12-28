@@ -49,6 +49,23 @@ section h2 {
 
 /* Mobile Layout. */
 
+/* Mission Statement Styling */
+#mission {
+    margin-bottom: 3rem;
+}
+
+#mission img {
+    display: block;
+    max-height: 100px;
+}
+
+.missionstatement {
+    display: block;
+    line-height: 1.7;
+}
+
+
+/* Collections Styling */
 figure {
     position: relative;
     display: flex;
@@ -80,7 +97,7 @@ figcaption a {
     color: var(--link-hover-background);
 }
 
-.collection ul {
+#collection ul {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -89,7 +106,7 @@ figcaption a {
     list-style-type: none;
 }
 
-.collection ul li {
+#collection ul li {
     flex-basis: 100%;
     padding: 0;
 }
@@ -126,11 +143,25 @@ figcaption a {
 
 /* Tablet Layout */
 @media (min-width: 550px) {
-    .collection ul {
+    
+    /* Mission Statement Styling */
+    .missionstatement {
+        display: flow-root; /* This "clears" the float. This prevents weird float things. */
+        max-width: 900px;
+    }
+    
+    #mission img {
+        float: left;
+        shape-outside: polygon(0% 0%, 52.5% 0%, 32% 100%, 0% 100%);
+        max-height: 150px;
+    }
+
+    /* Collections Styling */
+    #collection ul {
         justify-content: space-between;
     }
 
-    .collection ul li {
+    #collection ul li {
         flex-basis: 49.5%;
     }
 }
@@ -138,11 +169,18 @@ figcaption a {
 
 /* Desktop Layout */
 @media (min-width: 800px) {
-    .collection ul li {
+    
+    /* Mission Statement Styling */
+    #mission img {
+        max-height: 200px;
+    }
+
+    /* Collections Styling */
+    #collection ul li {
         flex-basis: 32.5%;
     }
 
-    .collection h2 {
+    section h2 {
         margin-left: 100px;
     }
 }
