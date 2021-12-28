@@ -1,0 +1,62 @@
+/* Variables */
+
+:root {
+    --link-background: #9b2226;
+    --link-hover-background: #001219;
+    --link-hover-color: #e9d8a6;
+    --outer-bounds-background: #DBE5DE;
+    --primary-background: #e9d8a6;
+    --banner-background: #ca6702;
+    --tertiary-background: #005f73;
+    --accent-1: #005f73;
+    --accent-2: #3d9397;
+    --accent-3: #94d28d;
+    --accent-4: #ee9800;
+    --accent-5: #ca6702;
+    --accent-6: #bb3e03;
+}
+
+
+/* General Styling */
+
+html {
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--outer-bounds-background);
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+section h2 {
+    font-size: 2.5rem;
+}
+
+
+/* Mobile Layout. */
+
+
+/* Tablet Layout */
+@media (min-width: 550px) {
+
+}
+
+
+/* Desktop Layout */
+@media (min-width: 800px) {
+
+}
