@@ -7,7 +7,7 @@
     --outer-bounds-background: #DBE5DE;
     --primary-background: #e9d8a6;
     --banner-background: #ca6702;
-    --tertiary-background: #005f73;
+    --secondary-background: #005f73;
     --accent-1: #005f73;
     --accent-2: #3d9397;
     --accent-3: #94d28d;
@@ -141,6 +141,43 @@ figcaption a {
     border-color: var(--accent-6);
 }
 
+
+/* Footer Styling */
+#footer {
+    background-color: var(--primary-background);
+}
+
+footer {
+    display: flex;
+    flex-flow: column nowrap;
+    padding: 3rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer h4 {
+    font-size: 1.5rem;
+}
+
+footer ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+footer li {
+    margin: 0 0.5rem 2rem 0.5rem;
+}
+
+footer address {
+    font-weight: bold;
+    font-style: normal;
+    font-size: 1.5rem;
+}
+
 /* Tablet Layout */
 @media (min-width: 550px) {
     
@@ -163,6 +200,13 @@ figcaption a {
 
     #collection ul li {
         flex-basis: 49.5%;
+    }
+    
+    /* Footer Styling */
+    footer {
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        align-items: baseline;
     }
 }
 
