@@ -49,14 +49,100 @@ section h2 {
 
 /* Mobile Layout. */
 
+figure {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 10px;
+    overflow: hidden;
+}
+
+figcaption {
+    position: absolute;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    bottom: 0%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption a {
+    text-decoration: none;
+    color: var(--link-hover-background);
+}
+
+.collection ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.collection ul li {
+    flex-basis: 100%;
+    padding: 0;
+}
+
+.accent1,
+.accent1 a:hover {
+    border-color: var(--accent-1);
+}
+
+.accent2,
+.accent2 a:hover {
+    border-color: var(--accent-2);
+}
+
+.accent3,
+.accent3 a:hover {
+    border-color: var(--accent-3);
+}
+
+.accent4,
+.accent4 a:hover {
+    border-color: var(--accent-4);
+}
+
+.accent5,
+.accent5 a:hover {
+    border-color: var(--accent-5);
+}
+
+.accent6,
+.accent6 a:hover {
+    border-color: var(--accent-6);
+}
 
 /* Tablet Layout */
 @media (min-width: 550px) {
+    .collection ul {
+        justify-content: space-between;
+    }
 
+    .collection ul li {
+        flex-basis: 49.5%;
+    }
 }
 
 
 /* Desktop Layout */
 @media (min-width: 800px) {
+    .collection ul li {
+        flex-basis: 32.5%;
+    }
 
+    .collection h2 {
+        margin-left: 100px;
+    }
 }
