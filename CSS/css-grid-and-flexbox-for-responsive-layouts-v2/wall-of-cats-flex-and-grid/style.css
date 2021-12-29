@@ -46,6 +46,36 @@ section h2 {
     font-size: 2.5rem;
 }
 
+figure {
+    position: relative;
+    display: flex;
+    flex-flow: column nowrap;
+    margin: 0 0 0.5rem 0;
+    padding: 0;
+    border-radius: 5px;
+    border-style: solid;
+    border-width: 10px;
+    overflow: hidden;
+}
+
+figcaption {
+    position: absolute;
+    padding: 1rem;
+    font-size: 2rem;
+    font-weight: bold;
+    bottom: 0%;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+figure img {
+    width: 100%;
+}
+
+figcaption a {
+    text-decoration: none;
+    color: var(--link-hover-background);
+}
 
 /* Mobile Layout. */
 
@@ -151,38 +181,31 @@ nav li {
 }
 
 
-/* Collections Styling */
-figure {
-    position: relative;
+/* Popular Photos Styling */
+.populardiv {
+    background-color: var(--secondary-background);
+    padding: 2rem 0 3rem 0;
+}
+
+#popular h2 {
+    color: white;
+}
+
+#popular ul {
     display: flex;
-    flex-flow: column nowrap;
-    margin: 0 0 0.5rem 0;
+    flex-flow: row wrap;
+    justify-content: center;
     padding: 0;
-    border-radius: 5px;
-    border-style: solid;
-    border-width: 10px;
-    overflow: hidden;
+    margin: 0;
+    list-style-type: none;
 }
 
-figcaption {
-    position: absolute;
-    padding: 1rem;
-    font-size: 2rem;
-    font-weight: bold;
-    bottom: 0%;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.8);
+#popular ul li {
+    flex-basis: 100%;
+    padding: 0;
 }
 
-figure img {
-    width: 100%;
-}
-
-figcaption a {
-    text-decoration: none;
-    color: var(--link-hover-background);
-}
-
+/* Collections Styling */
 #collection ul {
     display: flex;
     flex-flow: row wrap;
@@ -299,6 +322,19 @@ footer address {
         max-height: 150px;
     }
 
+    /* Popular Photos Styling */
+    #popular ul {
+        justify-content: space-between;
+    }
+
+    #popular ul li {
+        flex-basis: 49.5%;
+    }
+
+    #popular ul li:last-child {
+        flex-basis: 100%;
+    }
+
     /* Collections Styling */
     #collection ul {
         justify-content: space-between;
@@ -319,6 +355,11 @@ footer address {
 
 /* Desktop Layout */
 @media (min-width: 800px) {
+    /* Generic Styling */
+    section h2 {
+        margin-left: 100px;
+    }
+
     /* Header Styling */
     nav ul {
         justify-content: flex-end;
@@ -345,12 +386,14 @@ footer address {
         max-height: 200px;
     }
 
-    /* Collections Styling */
-    #collection ul li {
+    /* Popular Photos Styling */
+    #popular ul li,
+    #popular ul li:last-child {
         flex-basis: 32.5%;
     }
 
-    section h2 {
-        margin-left: 100px;
+    /* Collections Styling */
+    #collection ul li {
+        flex-basis: 32.5%;
     }
 }
