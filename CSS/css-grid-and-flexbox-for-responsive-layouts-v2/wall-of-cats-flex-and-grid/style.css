@@ -172,7 +172,7 @@ nav li:first-child a {
     padding: 0;
     margin: 0;
 }
-    
+
 nav li {
     flex-basis: 48%;
     margin-bottom: 0.5rem;
@@ -250,6 +250,35 @@ nav li {
     padding: 0;
 }
 
+/* Archer Styling */
+.archerdiv {
+    background-color: var(--secondary-background);
+    padding: 2rem 0 3rem 0;
+}
+
+#archer h2 {
+    color: white;
+}
+
+#archer ul {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    gap: 0.5rem;
+}
+
+#archer ul li {
+    padding: 0;
+}
+
+#archer figure {
+    margin: 0;
+}
+
+
 /* Footer Styling */
 #footer {
     background-color: var(--primary-background);
@@ -293,7 +322,7 @@ footer address {
         justify-content: center;
         gap: 1.2em;
     }
-    
+
     nav li {
         flex-basis: auto;
         margin-bottom: 0;
@@ -308,13 +337,13 @@ footer address {
         color: var(--secondary-background);
         background-color: transparent;
     }
-    
+
     /* Mission Statement Styling */
     .missionstatement {
         display: flow-root; /* This "clears" the float. This prevents weird float things. */
         max-width: 900px;
     }
-    
+
     #mission img {
         float: left;
         shape-outside: polygon(0% 0%, 52.5% 0%, 32% 100%, 0% 100%);
@@ -346,7 +375,24 @@ footer address {
     #collection ul li:last-child {
         flex-basis: 100%;
     }
-    
+
+    /* Archer Styling */
+    #archer ul {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .span-2r {
+        grid-row: span 2;
+    }
+
+    .span-3c {
+        grid-column: span 3;
+    }
+
+    .span-2c {
+        grid-column: span 2;
+    }
+
     /* Footer Styling */
     footer {
         flex-flow: row nowrap;
@@ -383,7 +429,7 @@ footer address {
     nav li:nth-child(5) {
         order: 3;
     }
-    
+
     /* Mission Statement Styling */
     #mission img {
         max-height: 200px;
