@@ -77,6 +77,36 @@ figcaption a {
     color: var(--link-hover-background);
 }
 
+.accent1,
+.accent1 a:hover {
+    border-color: var(--accent-1);
+}
+
+.accent2,
+.accent2 a:hover {
+    border-color: var(--accent-2);
+}
+
+.accent3,
+.accent3 a:hover {
+    border-color: var(--accent-3);
+}
+
+.accent4,
+.accent4 a:hover {
+    border-color: var(--accent-4);
+}
+
+.accent5,
+.accent5 a:hover {
+    border-color: var(--accent-5);
+}
+
+.accent6,
+.accent6 a:hover {
+    border-color: var(--accent-6);
+}
+
 /* Mobile Layout. */
 
 /* Header Styling */
@@ -220,37 +250,6 @@ nav li {
     padding: 0;
 }
 
-.accent1,
-.accent1 a:hover {
-    border-color: var(--accent-1);
-}
-
-.accent2,
-.accent2 a:hover {
-    border-color: var(--accent-2);
-}
-
-.accent3,
-.accent3 a:hover {
-    border-color: var(--accent-3);
-}
-
-.accent4,
-.accent4 a:hover {
-    border-color: var(--accent-4);
-}
-
-.accent5,
-.accent5 a:hover {
-    border-color: var(--accent-5);
-}
-
-.accent6,
-.accent6 a:hover {
-    border-color: var(--accent-6);
-}
-
-
 /* Footer Styling */
 #footer {
     background-color: var(--primary-background);
@@ -343,6 +342,10 @@ footer address {
     #collection ul li {
         flex-basis: 49.5%;
     }
+
+    #collection ul li:last-child {
+        flex-basis: 100%;
+    }
     
     /* Footer Styling */
     footer {
@@ -393,7 +396,8 @@ footer address {
     }
 
     /* Collections Styling */
-    #collection ul li {
+    #collection ul li,
+    #collection ul li:last-child {
         flex-basis: 32.5%;
     }
 }
