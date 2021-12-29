@@ -49,6 +49,78 @@ section h2 {
 
 /* Mobile Layout. */
 
+/* Header Styling */
+#header {
+    background-color: var(--primary-background);
+}
+
+header {
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+nav ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--link-hover-background);
+    color: white;
+    background-color: var(--link-background);
+    display: block;
+    padding: 0.5rem;
+    border-radius: 5px;
+    text-align: center;
+}
+
+nav a:hover {
+    color: var(--link-hover-color);
+    background-color: var(--link-hover-background);
+}
+
+nav li:first-child a {
+    color: var(--link-hover-background);
+    background-color: transparent;
+}
+
+nav img,
+nav h1 {
+    max-height: 3rem;
+}
+
+nav li:first-child {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+nav li:first-child a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+    
+nav li {
+    flex-basis: 48%;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+
+
 /* Mission Statement Styling */
 #mission {
     margin-bottom: 3rem;
@@ -180,6 +252,26 @@ footer address {
 
 /* Tablet Layout */
 @media (min-width: 550px) {
+    /* Header Styling */
+    nav ul {
+        justify-content: center;
+        gap: 1.2em;
+    }
+    
+    nav li {
+        flex-basis: auto;
+        margin-bottom: 0;
+    }
+
+    nav a {
+        color: var(--link-hover-background);
+        background-color: transparent;
+    }
+
+    nav a:hover {
+        color: var(--secondary-background);
+        background-color: transparent;
+    }
     
     /* Mission Statement Styling */
     .missionstatement {
@@ -213,6 +305,26 @@ footer address {
 
 /* Desktop Layout */
 @media (min-width: 800px) {
+    /* Header Styling */
+    nav ul {
+        justify-content: flex-end;
+    }
+
+    nav li:first-child {
+        flex-basis: auto;
+        margin: 0 auto;
+        order: 2;
+    }
+
+    nav li:nth-child(2),
+    nav li:nth-child(3) {
+        order: 1;
+    }
+
+    nav li:nth-child(4),
+    nav li:nth-child(5) {
+        order: 3;
+    }
     
     /* Mission Statement Styling */
     #mission img {
