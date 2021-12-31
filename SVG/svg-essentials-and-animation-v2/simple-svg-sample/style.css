@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.voteresults {
+  background-color: rgb(151, 204, 206);
+  border: .2rem solid black;
+  border-radius: .5rem;
+  padding: 2rem;
+  max-width: 400px;
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+}
+
+.voteresults h2 {
+  text-align: center;
+}
+
+.voteresults nav {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 1rem;
+  justify-content: space-evenly;
+  margin-top: 2rem;
+}
+
+.voteresults button {
+  padding: 5px;
+  border-radius: .5rem;
+}
+
+.voteresults button svg {
+  max-width: 30px;
+  max-height: 30px;
+}
