@@ -1,18 +1,99 @@
-[class*="col-"] {
-  --width: 4;
-  --initialbasis: calc(var(--width, 0) / var(--columns, 4) * 100%);
-  --gap: calc((var(--columns) - var(--width)) * 1%);
+#devs ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  --columns: 2;
+}
+
+main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  --columns: 16;
+}
+
+section, #devs li {
+  --width: 16;
+  --initialbasis: calc(var(--width, 0) / var(--columns, 16) * 100%);
+  --gap-width: 0.3%;
+  --gap: calc((var(--columns, 16) - var(--width, 0)) * var(--gap-width));
   flex-basis: calc(var(--initialbasis) - var(--gap));
 }
 
+#devs li {
+  --width: 1;
+  --gap-width: 3%;
+}
+
 @media (min-width: 740px) {
-    
+  main {
+    --columns: 11;
+  }
+
+  #first {
+    --width: 5;
+    order: 1;
+  }
+
+  #main {
+    --width: 6;
+    order: 2;
+  }
+
+  #devs {
+    --width: 11;
+    order: 3;
+  }
+
+  #resources {
+    --width: 11;
+    order: 4;
+  }
+
+  #devs li {
+    --columns: 5;
+  }
 }
 @media (min-width: 950px){
+  main {
+    --columns: 14;
+  }
 
+  #first {
+    --width: 5;
+  }
+
+  #main {
+    --width: 6;
+  }
+
+  #devs {
+    --width: 14;
+    order: 4;
+  }
+
+  #resources {
+    --width: 3;
+    order: 3;
+  }
 }
 @media (min-width: 1200px) {
-    
+  main {
+    --columns: 16;
+  }
+
+  #devs {
+    --width: 2;
+    order: 3;
+  }
+
+  #resources {
+    order: 4;
+  }
+
+  #devs li {
+    --columns: 1;
+  }
 }
 
 /*
