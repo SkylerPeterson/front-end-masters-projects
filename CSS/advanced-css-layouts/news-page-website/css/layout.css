@@ -1,0 +1,32 @@
+[class*="col-"] {
+  --width: 4;
+  --initialbasis: calc(var(--width, 0) / var(--columns, 4) * 100%);
+  --gap: calc((var(--columns) - var(--width)) * 1%);
+  flex-basis: calc(var(--initialbasis) - var(--gap));
+}
+
+@media (min-width: 740px) {
+    
+}
+@media (min-width: 950px){
+
+}
+@media (min-width: 1200px) {
+    
+}
+
+/*
+  The below code was taken from Jen Kramer's Fronted Masters Class Repo.
+  Source Link: https://github.com/jen4web/fem-adv-css-layout/blob/master/05-home%20page/begin/css/layout.css
+*/
+
+@media (min-width: 740px) {
+    .floatleft {
+        float: left;
+        margin: 0 1rem 1rem 0;
+    }
+    .floatright {
+        float: right;
+        margin: 0 0 1rem 1rem;
+    }
+}
