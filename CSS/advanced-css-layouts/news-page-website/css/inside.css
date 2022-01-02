@@ -1,0 +1,77 @@
+#inside main {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  --columns: 16;
+}
+
+#inside main > * {
+  --width: 16;
+  --initialbasis: calc(var(--width, 0) / var(--columns, 4) * 100%);
+  --gap-width: 0.3%;
+  --gap: calc((var(--columns, 4) - var(--width, 0)) * var(--gap-width));
+  flex-basis: calc(var(--initialbasis) - var(--gap));
+}
+
+@media (min-width: 740px) {
+  #inside main article {
+    --width: 12;
+  }
+
+  #inside main aside {
+    --width: 4;
+  }
+}
+
+/*
+  The below code was taken from Jen Kramer's Fronted Masters Class Repo.
+  Source Link: https://github.com/jen4web/fem-adv-css-layout/blob/master/06-inside%20page/begin/css/inside.css
+*/
+
+.circle {
+    border-radius: 50%;
+    border: 5px solid #3D2C67;
+    float: left;
+    max-width: 155px;
+    shape-outside: circle(26.79% at 95px 96px);
+    shape-margin: 2rem;
+    margin-right: 2rem;
+}
+blockquote {
+    margin: 0;
+}
+blockquote cite {
+    font-weight: bold;
+}
+.fa-book-open {
+    display: block;
+    color: #C85028;
+    font-size: 100px;
+    text-align: center;
+}
+aside,
+aside p {
+    font-size: var(--text-sm);
+}
+aside {
+    background-color: #eee;
+    border: 1px solid #ccc;
+    padding: 1rem;
+}
+article {
+    border-bottom: none;
+}
+.button {
+    background-color: #C85028;
+    color: white;
+    font-size: var(--h2);
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    display: block;
+    text-align: center;
+}
+.button:hover {
+    color: white;
+    background-color: #3D2C67;
+}

@@ -54,6 +54,7 @@ section, #devs li {
     --columns: 5;
   }
 }
+
 @media (min-width: 950px){
   main {
     --columns: 14;
@@ -77,6 +78,7 @@ section, #devs li {
     order: 3;
   }
 }
+
 @media (min-width: 1200px) {
   main {
     --columns: 16;
