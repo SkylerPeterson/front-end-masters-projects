@@ -1,0 +1,82 @@
+.main-menu li,
+section > h1,
+header h2 {
+  font-size: var(--text-sm);
+}
+
+.main-toggle {
+  font-size: var(--h1);
+}
+
+header h1 {
+  font-size: calc(var(--h1) * var(--type-scale));
+}
+
+header h2 {
+  margin: 0 0 1rem 2rem;
+}
+
+#resources h1 {
+  font-size: var(--h2);
+}
+
+#resources h1 small {
+  font-size: var(--base-size);
+}
+
+@media(min-width: 200px) {
+  :root {
+    --type-scale: 1.125;
+  }
+}
+
+@media(min-width: 740px) {
+  :root {
+    --type-scale: 1.25;
+  }
+  
+  header h2 {
+    margin: 0 0 1rem 8rem;
+  }
+}
+
+/*
+  The below code was taken from Jen Kramer's Fronted Masters Class Repo.
+  Source Link: https://github.com/jen4web/fem-adv-css-layout/blob/master/08-you%20try%20it%20type%20scales/begin/css/type.css
+*/
+
+:root {
+  --base-size: 1em;
+  --type-scale: 1.125;
+  --h5: calc(var(--base-size) * var(--type-scale));
+  --h4: calc(var(--h5) * var(--type-scale));
+  --h3: calc(var(--h4) * var(--type-scale));
+  --h2: calc(var(--h3) * var(--type-scale));
+  --h1: calc(var(--h2) * var(--type-scale));
+  --text-sm: calc(var(--base-size) / var(--type-scale));
+}
+
+h1 {font-size: var(--h1);}
+
+h2 {font-size: var(--h2);}
+
+h3 {font-size: var(--h3);}
+
+h4 {font-size: var(--h4);}
+
+h5 {font-size: var(--h5);}
+
+p {font-size: var(--base-size);}
+
+small, .text_small {font-size: var(--text-sm)}
+
+@media (min-width: 480px) {
+  :root {
+    --type-scale: 1.2;
+  }
+}
+@media (min-width: 768px) {
+  :root {
+    --type-scale: 1.25;
+  }
+}
