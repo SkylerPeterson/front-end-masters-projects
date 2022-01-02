@@ -6,10 +6,14 @@ table {
   margin-bottom: 1rem;
 }
 
-table tr:first-of-type  {
+thead {
   position: absolute;
   top: -9999px;
   left: -9999px;
+}
+
+thead tr:nth-child(odd) {
+  background-color: white;
 }
 
 td {
@@ -31,13 +35,13 @@ td::before {
   overflow-x: auto;
 }
 
-#table h2 {
-  font-size: 1.5rem;
+caption {
+  width: 100%;
   text-align: left;
   font-weight: bold;
-  margin: 0;
-  padding-left: 1rem;
-  border: 1px solid black;
+  font-size: var(--h2);
+  padding: 0.5rem;
+  display: block;
 }
 
 th {
@@ -76,7 +80,7 @@ td:nth-of-type(10)::before { content: "Ring System?: "; }
 td:nth-of-type(11)::before { content: "Global Magnetic Field?: "; }
 
 @media (min-width: 740px) {
-  table, #table h2 {
+  table {
     margin-right: 1rem;
   }
 }
@@ -86,7 +90,7 @@ td:nth-of-type(11)::before { content: "Global Magnetic Field?: "; }
   td:nth-of-type(n):after {
       content: "";
   }
-  table tr:first-of-type {
+  thead {
       position: static;
   }
   thead, tbody {
@@ -104,14 +108,8 @@ td:nth-of-type(11)::before { content: "Global Magnetic Field?: "; }
   td {
     width: auto;
   }
-  table tr:nth-child(even) {
-    background-color: #f6dcd4;
-  }
-  table tr:nth-child(odd) {
-    background-color: white;
-  }
-  #table h2 {
-    border: none;
+  caption {
+    font-size: 1.5rem;
   }
 }
 
